@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import Distance from './Components/distance'
+import React, {useEffect, useState} from 'react';
 import './App.css';
 
 function App() {
+  const [zipcode, setZipcode] = useState({
+    zipcode1: "11230",
+    zipcode2: "11230"
+  }) ; 
+  //const [zipcode2, setZipcode2] = useState("35001") ;
+
+  function updateZipcode1(event){
+    setZipcode((prev)=>({...prev, zipcode1: event.target.value}))
+  }
+  function updateZipcode2(event){
+    setZipcode((prev)=>({...prev, zipcode2: event.target.value}))
+  }
+  // function updateZipcode(event){
+
+  // }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Distance  zip1 ={zipcode.zipcode1} zip2={zipcode.zipcode2}/>
+      <input type = "text" placeholder="Zipcode1" onChange={updateZipcode1}></input>
+      <br></br>
+      <input type = "text" placeholder="Zipcode2" onChange={updateZipcode2}></input>
     </div>
   );
 }
