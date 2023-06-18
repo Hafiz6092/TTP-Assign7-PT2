@@ -17,7 +17,7 @@ function App() {
   }
   
   return (
-    <div>
+    <div className='form'>
       <Distance  zip1 ={zipcode.zipcode1} zip2={zipcode.zipcode2}/>
       <input type = "text" placeholder="Zipcode1" onChange={updateZipcode1}></input>
       <br></br>

@@ -1,38 +1,38 @@
-.App {
-  text-align: center;
+.zipcodeInfo{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.zipcodeInfo div{
+  padding:20px;
+  border: 6px solid black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form input[type="text"]::placeholder {
+  color: #999;
 }
+
+.form input[type="text"]:focus {
+  outline: none;
+  border-color: #5c9eff;
+  box-shadow: 0 0 4px #5c9eff;
+}
+
+.form input[type="text"]:hover {
+  border-color: #999;
+}
+
