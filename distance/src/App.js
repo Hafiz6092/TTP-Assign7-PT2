@@ -7,18 +7,15 @@ function App() {
     zipcode1: "11230",
     zipcode2: "35004"
   }) ; 
-  //const [zipcode2, setZipcode2] = useState("35001") ;
 
   function updateZipcode1(event){
-    //setZipcode((prev)=>({...prev, zipcode1: event.target.value}))
-    zipcode.zipcode1 = event.target.value
+    setZipcode((prev)=>({...prev, zipcode1: event.target.value}))
   }
+  
   function updateZipcode2(event){
     setZipcode((prev)=>({...prev, zipcode2: event.target.value}))
   }
-  // function updateZipcode(event){
-
-  // }
+  
   return (
     <div>
       <Distance  zip1 ={zipcode.zipcode1} zip2={zipcode.zipcode2}/>
